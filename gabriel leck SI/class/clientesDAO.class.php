@@ -45,7 +45,8 @@ class clientesDAO
         );
         $sql->bindValue(":nome", $obj->getNome());
         $sql->bindValue(":usuario", $obj->getUsuario());
-        $sql->bindValue(":senha", hash('md5',$obj->getSenha()));
+        $salt = "_".$obj->getUsuario(); //adiciona o salt de segurança
+        $sql->bindValue(":senha", hash('md5',$obj->getSenha().$salt));
         $sql->bindValue(":contato", $obj->getContato());
         $sql->bindValue(":cpf", $obj->getCpf());
         return $sql->execute();
@@ -79,8 +80,9 @@ class clientesDAO
         $sql->bindValue(":usuario", $clientes->getUsuario());
         $sql->execute();
         if ($sql->rowCount() > 0) {
+            $salt = "_".$clientes->getUsuario();
             while ($retorno = $sql->fetch()) {
-                if ($retorno["senha"] == hash('md5',$clientes->getSenha())) {
+                if ($retorno["senha"] == hash('md5',$clientes->getSenha()).$salt) {
                     return $retorno; //tudo ok! faça o login
                 }
             }
