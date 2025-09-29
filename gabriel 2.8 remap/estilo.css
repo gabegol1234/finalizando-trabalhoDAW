@@ -39,3 +39,26 @@ header {
     width: 100%;
     z-index: 1000;     /* garante que fica por cima */
 }
+body img {
+        width: 100px;
+        height: 100px;
+    
+}
+.exemplo{
+    color:orange;
+    text-align: center;
+}
+
+.nome{color:darkblue}
+.divconteudo{
+    border:1px solid;
+    text-align: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.divconteudo a{
+    color:orange;
+    font-weight: bold;
+}

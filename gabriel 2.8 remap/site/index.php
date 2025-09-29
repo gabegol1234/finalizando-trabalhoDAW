@@ -1,5 +1,11 @@
-<link rel="stylesheet" type="text/css" href="../geral.css" />
-<link rel="stylesheet" type="text/css" href="../estilo.css" />
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmoteca</title>
+    <link rel="stylesheet" type="text/css" href="../estilo.css"/>
+</head>
+<body>
 <header>
 <img src="../imgsite/logo.png" alt="Logo" style="height: 100px; width: 120;/* ajuste conforme necessário */">
 </header>
@@ -16,9 +22,9 @@ if(isset($_GET["carrinho"]) && isset($_GET["id"])){
     }
     if(!in_array($_GET["id"], $_SESSION["carrinho"])){
         array_push($_SESSION["carrinho"], $_GET["id"]);
-        echo "<h2>Adicionado ao carrinho</h2>";
+        echo "<h2 class='exemplo'>Adicionado ao carrinho</h2>";
     } else {
-        echo "<h2>Produto já adicionado ao carrinho anteriormente</h2>";
+        echo "<h2 class='exemplo'>Produto já adicionado ao carrinho anteriormente</h2>";
     }
 }
 
@@ -83,12 +89,14 @@ if ($categoria != 0 && $retorno && is_array($retorno)) {
         return $filme['genero'] == $categoria;
     });
 }
-
+?>
+<div class="grid">
+<?php
 if ($retorno && is_array($retorno)) {
     foreach ($retorno as $linha) {
 ?>
-<div>
-    <h3><?= htmlspecialchars($linha["nome"]) ?></h3>
+<div class="divconteudo">
+    <h3 class="nome"><?= htmlspecialchars($linha["nome"]) ?></h3>
     <h4><?= htmlspecialchars($linha["preco"]) ?></h4>
     <h5><?= htmlspecialchars($linha["categorias"]) ?></h5>
     <?php
@@ -97,8 +105,9 @@ if ($retorno && is_array($retorno)) {
             echo "<img src='../imagens/".htmlspecialchars($retornoimg["nome"])."' />";
         }
     ?>
+    <br>
     <a href="?id=<?= urlencode($linha['idFilme']); ?>&carrinho">
-        add ao carrinho
+        Adicionar ao Carrinho
     </a>
 </div>
 <?php
@@ -108,3 +117,17 @@ if ($retorno && is_array($retorno)) {
 }
 
 ?>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer style="background-color:#1c1c1c; color:white; text-align:center; padding:10px;">
+    <p>Filmoteca © 2025</p>
+    <nav>
+        <a href="../sobreEmpresa/sobre.php" style="color:white;">Sobre nós</a> | 
+        <a href="../sobreEmpresa/contato.php" style="color:white;">Contato</a> | 
+        <a href="../sobreEmpresa/privacidade.php" style="color:white;">Política de Privacidade</a>
+    </nav>
+</footer>

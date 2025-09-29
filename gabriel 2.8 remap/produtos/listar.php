@@ -29,7 +29,6 @@ $retorno = ($busca != "" || $categoria > 0) ?
     <meta charset="UTF-8">
     <title>Filmoteca</title>
     <link rel="stylesheet" type="text/css" href="../estilo.css"/>
-    <link rel="stylesheet" type="text/css" href="../geral.css"/>
 </head>
 <body>
 
