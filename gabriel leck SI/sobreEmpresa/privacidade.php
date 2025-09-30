@@ -1,3 +1,0 @@
-Na Filmoteca, a privacidade de nossos clientes é uma prioridade. Todas as informações fornecidas durante as compras online, como e-mail e dados de contato, são tratadas com total confidencialidade e utilizadas exclusivamente para o envio dos produtos adquiridos. Não compartilhamos seus dados com terceiros e adotamos medidas de segurança para proteger suas informações contra acesso não autorizado.
-
-Ao utilizar nossos serviços, você concorda com o uso seguro de seus dados para garantir uma experiência prática, rápida e confiável, mantendo sempre o foco em entregar filmes e séries de diversas categorias diretamente ao seu e-mail, conforme adquirido.
