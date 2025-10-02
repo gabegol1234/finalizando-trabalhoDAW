@@ -6,8 +6,9 @@
     <link rel="stylesheet" type="text/css" href="../estilo.css"/>
 </head>
 <body>
-<header>
-<img src="../imgsite/logo.png" alt="Logo" style="height: 100px; width: 120;/* ajuste conforme necessário */">
+
+<header style="background-color:#1c1c1c; padding:10px; color:white;">
+    <h1>🎬 Filmoteca</h1>
 </header>
  
 <br>

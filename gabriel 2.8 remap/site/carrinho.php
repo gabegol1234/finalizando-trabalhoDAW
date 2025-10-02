@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmoteca</title>
+    <link rel="stylesheet" type="text/css" href="../estilo.css"/>
+</head>
+<body>
+
+<header style="background-color:#1c1c1c; padding:10px; color:white;">
+    <h1>🎬 Filmoteca</h1>
+</header>
+ 
 <?php
 session_start();
 include_once "../class/filmes.class.php";
@@ -15,6 +28,22 @@ if(isset($_SESSION["carrinho"])) {
 
 if (!$carrinho) {
     echo "<p>Seu carrinho está vazio.</p>";
+    ?>
+    <br>
+<br>
+<br>
+<br>
+<br>
+<footer style="background-color:#1c1c1c; color:white; text-align:center; padding:10px;">
+    <p>Filmoteca © 2025</p>
+    <nav>
+        <a href="../sobreEmpresa/sobre.php" style="color:white;">Sobre nós</a> | 
+        <a href="../sobreEmpresa/contato.php" style="color:white;">Contato</a> | 
+        <a href="../sobreEmpresa/privacidade.php" style="color:white;">Política de Privacidade</a>
+    </nav>
+</footer>
+    
+    <?php
     exit;
 }
 
@@ -73,4 +102,19 @@ $total = 0;
 <input type="hidden" name="total" value="<?=$total?>"/>
 
 <button type="submit">Finalizar compra</button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer style="background-color:#1c1c1c; color:white; text-align:center; padding:10px;">
+    <p>Filmoteca © 2025</p>
+    <nav>
+        <a href="../sobreEmpresa/sobre.php" style="color:white;">Sobre nós</a> | 
+        <a href="../sobreEmpresa/contato.php" style="color:white;">Contato</a> | 
+        <a href="../sobreEmpresa/privacidade.php" style="color:white;">Política de Privacidade</a>
+    </nav>
+</footer>
+
 </form>

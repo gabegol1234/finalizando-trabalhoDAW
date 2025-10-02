@@ -31,7 +31,7 @@ $objVendas->setDataVenda(date("Y-m-d")); // Corrigido para 4 dígitos
 $objVendas->setPagamento($_POST["pagamento"]);
 $objVendas->setEntrega($_POST["entrega"]);
 $objVendas->setStatusVenda(1);
-$objVendas->setPreco($_POST['total']);
+
 
 // Insere a venda
 $objVendasDAO = new VendasDAO();

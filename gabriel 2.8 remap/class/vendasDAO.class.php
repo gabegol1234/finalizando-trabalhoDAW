@@ -33,15 +33,15 @@ class VendasDAO
         $sql = $this->conexao->prepare("
             
 
-            INSERT INTO vendas (idCliente, statusVenda, pagamento, dataVenda, entrega, preco)
-            VALUES (:idCliente, :statusVenda, :pagamento, :dataVenda, :entrega, :preco)
+            INSERT INTO vendas (idCliente, statusVenda, pagamento, dataVenda, entrega)
+            VALUES (:idCliente, :statusVenda, :pagamento, :dataVenda, :entrega)
         ");
         $sql->bindValue(":idCliente", $obj->getIdCliente());
         $sql->bindValue(":statusVenda", $obj->getStatusVenda());
         $sql->bindValue(":pagamento", $obj->getPagamento());
         $sql->bindValue(":dataVenda", $obj->getDataVenda());
         $sql->bindValue(":entrega", $obj->getEntrega());
-        $sql->bindValue(":preco", $obj->getPreco());
+    
         $sql->execute();
 
         return $this->conexao->lastInsertId();
