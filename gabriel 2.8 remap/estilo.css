@@ -62,3 +62,43 @@ body img {
     color:orange;
     font-weight: bold;
 }
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: right;
+}
+.menu-categorias {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    /* faz os itens ficarem na horizontal */
+    gap: 20px;
+    /* espaço entre os itens */
+    width: 100%;
+}
+
+/* Estiliza os links */
+.menu-categorias li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.menu-categorias li a:hover {
+    background-color: white;
+    color: #1c1c1c;
+    border-radius: 5px;
+}
+.divmenu-categorias{
+    margin: 0 auto;
+    width: 100%;
+}
+.container1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-right: 20px;
+}

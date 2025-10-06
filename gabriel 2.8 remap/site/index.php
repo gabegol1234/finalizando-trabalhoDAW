@@ -42,17 +42,14 @@
     ?>
 
     <header style="background-color:#1c1c1c; padding:10px; color:white;">
-        <h1>🎬 Filmoteca</h1>
-        <ul class="menu-categorias">
-            <?php
-            foreach ($categorias as $linha) {
-                echo "<li><a href='listar.php?idCategoria=" . $linha["idCategoria"] . "'>" . $linha["nome"] . "</a></li>";
-            }
-            ?>
-        </ul>
+    <div class="container">    
+    <div class="container1">
+    <h1>🎬 Filmoteca</h1>
+    </div>
+    <div style="margin: 6px;">
         <!-- Formulário de busca -->
-        <form method="GET" action="" style="display:flex; gap:5px; margin-top:5px;">
-            <input type="text" name="q" placeholder="Buscar produto..." value="<?= htmlspecialchars($busca) ?>">
+        <form method="GET" action="" style="display:flex; gap:5px; margin-top:5px; text-align: center;">
+            <input type="text" name="q" placeholder="Buscar produto..." value="<?= htmlspecialchars($busca) ?>" style="width:700px">
             <select name="categoria">
                 <option value="0">Todas as categorias</option>
                 <?php
@@ -67,42 +64,22 @@
             <button type="submit"
                 style="background-color:#f39c12; color:white; border:none; padding:5px 10px;">Filtrar</button>
         </form>
-
-        <!-- Lista de categorias -->
-        <ul>
-         
+        </div>
+    <div class="divmenu-categorias">
+        <ul class="menu-categorias">
+            <?php
+            foreach ($categorias as $linha) {
+                echo "<li><a href='listar.php?idCategoria=" . $linha["idCategoria"] . "'>" . $linha["nome"] . "</a></li>";
+            }
+            ?>
             <li><a href="carrinho.php">Carrinho de Compras</a></li>
+            
         </ul>
+    </div>
+    </div>
+
     </header>
 
-    <style>
-        /* Remove os marcadores e padding padrão */
-        .menu-categorias {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            /* faz os itens ficarem na horizontal */
-            gap: 20px;
-            /* espaço entre os itens */
-        }
-
-        /* Estiliza os links */
-        .menu-categorias li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        /* Efeito ao passar o mouse */
-        .menu-categorias li a:hover {
-            background-color: white;
-            color: #1c1c1c;
-            border-radius: 5px;
-        }
-    </style>
 
 
 
@@ -137,8 +114,8 @@
             foreach ($retorno as $linha) {
                 ?>
                 <div class="divconteudo">
-                    <h3 class="nome"><?= htmlspecialchars($linha["nome"]) ?></h3>
-                    <h4><?= htmlspecialchars($linha["preco"]) ?></h4>
+                    <h3 class="nome">Nome: <?= htmlspecialchars($linha["nome"]) ?></h3>
+                    <h4>Preço: <?= htmlspecialchars($linha["preco"]) ?></h4>
                     <h5><?= htmlspecialchars($linha["categorias"]) ?></h5>
                     <?php
                     $retornoimg = $objimagensDAO->retornarUm($linha["idFilme"]);
