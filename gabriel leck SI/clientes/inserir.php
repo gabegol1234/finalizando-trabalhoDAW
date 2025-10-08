@@ -20,7 +20,7 @@
         <input type="text" name="cpf"/>
         <br>
         senha:
-        <input type="text" name="senha"/>
+        <input type="password" name="senha"/>
         <br>
         <button type="submit">enviar</button>
         <br>

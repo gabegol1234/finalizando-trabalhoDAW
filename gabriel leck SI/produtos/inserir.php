@@ -54,7 +54,7 @@ $categorias = $objcategorias->listar();
         trilha sonora:
         <input type="text" name="trilhaSonora" />
         <br>
-        <input type="file" name="imagem[]" multiple />
+        <input type="file" name="imagem" accept ="image/png, image/jpg"/>
         <br />
         <label>Ofertar: </label>
         <input type="number" name="ofertar" />

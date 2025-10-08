@@ -27,7 +27,7 @@ class ImagensDAO
     public function inserir(Imagens $obj)
     {
         $sql = $this->conexao->prepare(
-            "INSERT INTO imagens
+            "INSERT INTO imagem
             (nome, idFilme)
             VALUES
             (:nome, :idFilme)"
