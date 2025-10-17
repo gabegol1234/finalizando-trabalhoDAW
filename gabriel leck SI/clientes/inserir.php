@@ -8,10 +8,10 @@
 <body>
     <form action="inserir_ok.php" method="POST">
         nome:
-        <input type="text" name="nome"/>
+        <input type="nome" name="nome"/>
         <br>
         usuario:
-        <input type="text" name="usuario"/>
+        <input type="email" name="usuario"/>
         <br>
         contato:
         <input type="number" name="contato"/>
