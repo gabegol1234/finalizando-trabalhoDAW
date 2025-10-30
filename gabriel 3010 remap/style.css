@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc;  /* Cor de fundo, igual ao segundo arquivo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+}
+
+header {
+    background-color: #1c1c1c; /* Cor do cabeçalho, igual ao segundo arquivo */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header a.logout {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header a.logout:hover {
+    background-color: darkred;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    flex: 1;  /* Faz o conteúdo ocupar todo o espaço disponível */
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #ddd;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #1c1c1c; /* Cor do botão, igual ao cabeçalho */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Ações dos botões na tabela */
+.actions a {
+    margin-right: 10px;
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.actions a.delete {
+    color: red;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;  /* Cor do rodapé, igual ao segundo arquivo */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
