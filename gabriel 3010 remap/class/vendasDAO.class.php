@@ -36,4 +36,12 @@ class VendasDAO extends Connection
 
         return $this->conexao->lastInsertId();
     }
+    public function listarVendas()
+    {
+        $sql = $this->conexao->prepare(
+            "SELECT * FROM vendas"
+        );
+        $sql->execute();
+        return $sql->fetchAll();
+    }
 }

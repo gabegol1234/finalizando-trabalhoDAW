@@ -5,7 +5,7 @@ include_once "../class/imagens.class.php";
 include_once "../class/imagensDAO.class.php";
 include_once "../class/categorias.class.php";
 include_once "../class/categoriasDAO.class.php";
-require_once "../sobreEmpresa/header.php";
+
 
 $objfilmesDAO = new FilmesDAO();
 $objimagensDAO = new ImagensDAO();
@@ -24,14 +24,41 @@ $retorno = ($busca != "" || $categoria > 0) ?
     $objfilmesDAO->listar();
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Filmoteca</title>
-    <link rel="stylesheet" type="text/css" href="../estilo.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin - Painel</title>
+    <link rel="stylesheet" href="../estilingue.css">
 </head>
+
 <body>
+    <header class="header">
+        <div>🎬 Filmoteca</div>
+        <div style="margin-left:auto" class="text-muted">Administrador</div>
+    </header>
+
+
+    <div class="container app">
+        <aside class="sidebar card">
+            <nav class="nav">
+                <a href="../produtos/listar.php">Produtos</a>
+                <a href="../vendas/listar.php">Pedidos</a>
+                <a href="../clientes/listar.php">Clientes</a>
+                <a href="../categorias/listar.php">Categorias</a>
+                <a href="/user/index.html">Ir para o site do usuário →</a>
+            </nav>
+            <hr style="margin:12px 0">
+           
+        </aside>
+
+
+        <main class="main">
+            <h2>LISTA DE VENDAS</h2>
+
+            <!-- ATE AQUI TOPO -->
 
 
 
@@ -59,14 +86,13 @@ $retorno = ($busca != "" || $categoria > 0) ?
     <br>
     <br>
 </div>
-<footer style="background-color:#1c1c1c; color:white; text-align:center; padding:10px;">
-    <p>Filmoteca © 2025</p>
-    <nav>
-        <a href="../sobreEmpresa/sobre.php" style="color:white;">Sobre nós</a> | 
-        <a href="../sobreEmpresa/contato.php" style="color:white;">Contato</a> | 
-        <a href="../sobreEmpresa/privacidade.php" style="color:white;">Política de Privacidade</a>
-    </nav>
-</footer>
+  <!-- RODAPE DAQUI PARA BAIXO -->
 
+  </main>
+    </div>
+
+
+    <script src="/assets/js/main.js"></script>
 </body>
+
 </html>
